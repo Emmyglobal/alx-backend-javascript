@@ -1,0 +1,35 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "A brief description of your project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "webpack --config webpack.config.js",
+    "test": "mocha", // Updated to use Mocha
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "clean": "rm -rf dist",
+    "clean-win": "rmdir /s /q dist",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    // Your project dependencies
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "webpack": "^5.51.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "mocha": "^10.0.0", // Added Mocha
+    "chai": "^4.3.4" // Added Chai
+  }
+}
