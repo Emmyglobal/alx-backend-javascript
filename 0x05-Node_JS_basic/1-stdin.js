@@ -7,7 +7,7 @@ const cmd = readline.createInterface({
 });
 
 //display message
-console.log('Welcome to Holberton School, what is your name?\n');
+console.log('Welcome to Holberton School, what is your name?');
 
 cmd.on('line', (input) => {
 	console.log(`Your name is: ${input}`);
@@ -15,5 +15,5 @@ cmd.on('line', (input) => {
 });
 
 cmd.on('close', () => {
-	console.log('This important software is now closing\n');
+	console.log('This important software is now closing');
 });
