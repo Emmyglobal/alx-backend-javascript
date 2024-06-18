@@ -9,7 +9,7 @@ const cmd = readline.createInterface({
 //display message
 console.log('Welcome to Holberton School, what is your name?');
 
-cmd.on('line', (input) => {
+cmd.on('', (input) => {
 	console.log(`Your name is: ${input}`);
 	cmd.close();
 });
