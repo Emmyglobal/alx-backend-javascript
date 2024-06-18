@@ -1,20 +1,13 @@
-//import readline
-const readline = require('readline');
-
-const cmd = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout,
-	terminal: false
-});
-
-//display message
 console.log('Welcome to Holberton School, what is your name?');
 
-cmd.on('line', (input) => {
-	console.log(`Your name is: ${input}`);
-	cmd.close();
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
+
+  if (chunk) {
+    process.stdout.write(`Your name is: ${chunk}`);
+  }
 });
 
-cmd.on('close', () => {
-	console.log('This important software is now closing');
+process.stdin.on('end', () => {
+  console.log('This important software is now closing');
 });
