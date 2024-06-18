@@ -9,10 +9,11 @@ const cmd = readline.createInterface({
 //display message
 console.log('Welcome to Holberton School, what is your name?\n');
 
-cmd.on('line', (name) => {
-	console.log(`Your name is: ${name}`);
+cmd.on('line', (input) => {
+	console.log(`Your name is: ${input}`);
+	cmd.close();
 });
 
-cmd.close('close', () => {
+cmd.on('close', () => {
 	console.log('This important software is now closing\n');
 });
