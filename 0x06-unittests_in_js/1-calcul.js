@@ -1,20 +1,21 @@
 function calculateNumber(type, a, b) {
-  const aa = Math.round(a);
-  const bb = Math.round(b);
+  const x = Math.round(a);
+  const y = Math.round(b);
   let result = 0;
   if (type === 'SUM') {
-    result = aa + bb;
+    result = x + y;
   }
   if (type === 'SUBTRACT') {
-    result = aa - bb;
+    result = x - y;
   }
   if (type === 'DIVIDE') {
-    if (bb === 0) {
+    if (y === 0) {
       result = 'Error';
     } else {
-      result = aa / bb;
+      result = x / y;
     }
   }
   return result;
 }
 
+module.exports = calculateNumber;
